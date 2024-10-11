@@ -1,0 +1,148 @@
+body {
+    background: linear-gradient(#ffc4c6, #ff7b84);
+    background-attachment: fixed; 
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    max-width: 30%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    animation-name: mainFadeIn;
+    animation-duration: 1s;
+}
+
+h1 {
+    font-size: 35px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    animation-name: textFadeIn;
+    opacity: 0;
+    animation-delay: 1.1s;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#countToDo {
+    opacity: 0;
+    animation-name: textFadeIn;
+    animation-delay: 1.2s;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#inputBlock {
+    margin-top: 15px;
+    opacity: 0;
+    animation-name: textFadeIn;
+    animation-delay: 1.3s;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.completed .listItem{
+    color:grey;
+    text-decoration: line-through;
+}
+
+.listItem {
+    transition: color 0.2s;
+}
+
+#taskList {
+    list-style-type: none;
+}
+
+li {
+    animation-name: listItemFade;
+    animation-duration: 0.4s;
+    font-family: sans-serif;
+}
+
+li .listItem:hover {
+    text-decoration: line-through;
+}
+
+.removeBtn {
+    margin-left: 5px;
+}
+
+#infoText {
+    color: red;
+    margin: 5px;
+    font-size: 10px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+.infoTextClass {
+    animation-name: infoTextFade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Animations */
+
+@keyframes mainFadeIn {
+    0% {
+        opacity: 0%;
+        transform: translateY(-150px)
+    }
+    50% {
+        opacity: 100%;
+    }
+    60% {
+        transform: translateY(25px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+
+}
+@keyframes textFadeIn {
+    0% {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes listItemFade {
+    0% {
+        opacity: 0%;
+        transform: translateY(15px)
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+@keyframes infoTextFade {
+    0% {
+        opacity: 0%;
+    }
+    20% {
+        opacity: 100%;
+    }
+    40% {
+        opacity: 0%;
+    }
+    60% {
+        opacity: 100%;
+    }
+    80% {
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+
+}
